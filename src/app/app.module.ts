@@ -4,13 +4,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { SampleModule } from 'sturgeon';
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SampleModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
