@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+
+
+import { SampleModule } from 'sturgeon';
+import { SampleService } from 'sturgeon';
 
 
 @NgModule({
@@ -10,9 +13,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    SampleModule.forRoot()
   ],
-  providers: [],
+  providers: [SampleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
